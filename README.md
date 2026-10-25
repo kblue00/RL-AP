@@ -14,7 +14,7 @@ An Archipelago world and client for Rocket League. The client connects to Archip
 - Quick-chat themed filler items.
 - Up to 5 unique traps (Scoreboard, Boost, Spin, Ball Cam, and Jump)
 - Archipelago Launcher client with Stats API match detection, progress tracking, and controller to keyboard mapping to allow for input blocking for traps and ability unlocks
-- Deathlink support (Getting demoed sends a deathlink, receiving a deathlink disabled forward and reverse input)
+- Deathlink support (Getting demoed sends a deathlink, receiving a deathlink disables forward and reverse input)
 
 ## Install
 
@@ -53,7 +53,7 @@ Real controller input needs to be hidden from Rocket League for this setup to wo
 
 Note: Controller inputs are only blocked during an active match and when the game is focused, physical keyboard inputs do not get blocked. Navigating menues with mouse is reccomended for simplicity.
 
-## ai-Usage Disclosure
+## AI-Usage Disclosure
 
 This project is heavily vibe coded, using Codex/ChatGPT. However, everything has been thouroughly human tested before publishing.
 AI was used to build the AP client, APworld, and file structure.
