@@ -54,6 +54,12 @@ class RocketLeagueWorld(World):
         required = self.options.win_tickets_required.value
         if required:
             final_location.access_rule = lambda state, count=required: state.has("Win Ticket", self.player, count)
+        if self.options.ability_unlocks.value:
+            for name in locations.DEMO_LOCATION_NAMES[:self.options.demos_per_match.value]:
+                demo_location = self.multiworld.get_location(name, self.player)
+                demo_location.access_rule = lambda state: (
+                    state.has("Boost", self.player) or state.has("Jump/Flip", self.player)
+                )
         self.multiworld.completion_condition[self.player] = lambda state: state.has("Victory", self.player)
 
     def create_items(self) -> None:
